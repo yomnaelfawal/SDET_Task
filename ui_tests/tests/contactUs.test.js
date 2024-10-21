@@ -4,12 +4,10 @@ module.exports = {
 
         contactPage
             .navigate()
-            .pause(2000)
-            .fillOutForm('test@gmail.com', '123123', 'test messages')
+            .fillOutForm('test@hehe.com', '1200120012001200', 'hey its me im the problem its me')
             .makeSelection('WEBMASTER')
-            .pause(2000)
-            .sendMessage()
-            .pause(5000)
+            .uploadFiles("D:/Coding/Coursera/git-cheat-sheet-education.pdf")
+            .submit()
             .end();
     }
 }

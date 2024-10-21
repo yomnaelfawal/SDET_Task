@@ -26,17 +26,17 @@ module.exports = {
                 value = 1
             return this
                     .click('@subjectHeaderDropDown')
-                    .pause(500)
+                    .pause(100)
                     .click(`#id_contact > option:nth-child(${value})`);
         },
-        sendMessage(){
+        submit(){
             return this
+                    .waitForElementVisible('@sendBtn')
                     .click('@sendBtn');
         },
         uploadFiles(filePath){
              return this
-                     .waitForElementVisible('@fileUploader')
-                     .setValue('@fileUploader', require('path').resolve(filePath));
+                    .setValue('@fileUploader', require('path').resolve(filePath));
                     
         },
     }]
