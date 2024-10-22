@@ -9,15 +9,17 @@ module.exports = {
         let currUrl = '';
         browser.getCurrentUrl(function(result){
             currUrl = result.value;
-        });    
+        });   
+        
+        currPage = browser.page.productPage();
 
-        currPage = browser.page.searchResultsPage();
 
         currPage
+            .setUrl(currUrl)
             .chooseSort(1)
             .chooseView('LIST')
             .pause(3000)
             .end();
         
     }
-}
+};

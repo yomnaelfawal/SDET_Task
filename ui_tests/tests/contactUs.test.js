@@ -6,9 +6,8 @@ module.exports = {
             .navigate()
             .fillOutForm('test@hehe.com', '1200120012001200', 'hey its me im the problem its me')
             .makeSelection('WEBMASTER')
-            .uploadFiles("./tests/dummy_files/mp3_test.mp3")
+            .uploadFiles("./tests/dummy_files/mp4_test.mp4")
             .submit()
-            .pause(10000)
             .end();
     }
 }

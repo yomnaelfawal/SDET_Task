@@ -1,4 +1,6 @@
 module.exports = {
+    url: '',
+
     elements: {
         productList : '#product_list',
         gridView : '#grid',
@@ -11,6 +13,11 @@ module.exports = {
     },
 
     commands : [{
+        setUrl(currUrl){
+            this.url = currUrl;
+            return this;
+        },
+        
         getSearchResults(callback){
             const browser = this.api;
             browser.elements('css selector', `${this.elements.productList} > *`, (result) => {

@@ -1,1 +1,1 @@
-{"modules":{"search.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\search.test.js","status":"skip"},"contactUs.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\contactUs.test.js","status":"pass"}}}
+{"modules":{"contactUs.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\contactUs.test.js","status":"pass"},"search.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\search.test.js","status":"skip"}}}
