@@ -5,12 +5,17 @@ module.exports = {
         currPage
             .navigate()
             .search('Dresses');
-        
-        currPage = browser.page.searchResults();
+
+        let currUrl = '';
+        browser.getCurrentUrl(function(result){
+            currUrl = result.value;
+        });    
+
+        currPage = browser.page.searchResultsPage();
 
         currPage
-            //.setUrl(currUrl)
             .chooseSort(1)
+            .chooseView('LIST')
             .pause(3000)
             .end();
         
