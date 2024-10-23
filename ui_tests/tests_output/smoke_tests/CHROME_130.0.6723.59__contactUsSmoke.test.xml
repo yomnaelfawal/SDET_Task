@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="smoke_tests.contactUsSmoke.test"
+    errors="0" failures="0" hostname="" id="" package="smoke_tests" skipped="0"
+    tests="2" time="12.00" timestamp="">
+  
+    <testcase name="Contact Us Visibility Test" classname="smoke_tests.contactUsSmoke.test" time="0.4140" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Contact Us Basic Functionality Test" classname="smoke_tests.contactUsSmoke.test" time="2.476" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

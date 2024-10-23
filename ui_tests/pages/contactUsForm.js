@@ -8,6 +8,8 @@ module.exports = {
         fileUploader: '#fileUpload',
         messageForm: '#message',
         sendBtn: '#submitMessage',
+        submissionMsg: '#center_column > p',
+        errors: '#center_column > div > p',
     },
 
     commands: [{
@@ -18,6 +20,7 @@ module.exports = {
                     .setValue('@messageForm', message);
         },
         makeSelection(text){
+            let value;
             if (text.toLowerCase() === 'webmaster')
                 value = 3
             else if (text.toLowerCase() === ('customer service'))
@@ -38,6 +41,10 @@ module.exports = {
              return this
                     .setValue('@fileUploader', require('path').resolve(filePath));
                     
+        },
+        checkSubmissionSuccess(){
+            this.waitForElementVisible('@submissionMsg');
+            return this.assert.textContains('@submissionMsg','Your message has been successfully sent to our team.');
         },
     }]
 
