@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="2">
+
+  <testsuite name="nightly_tests.contactUsForm.test"
+    errors="1" failures="0" hostname="" id="" package="nightly_tests" skipped="2"
+    tests="2" time="9.371" timestamp="">
+  
+    <testcase name="checkSubmissionStatus" classname="nightly_tests.contactUsForm.test" time="3.926" assertions="0">
+    </testcase>
+  
+    <testcase name="Submit Message Without Heading Test" classname="nightly_tests.contactUsForm.test" time="0.7580" assertions="0">
+    <error type="error"><![CDATA[
+    ReferenceError: checkSubmissionStatus is not defined
+    at Submit Message Without Heading Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:22:23)
+    at Context.call (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\context.js:515:35)
+    at TestCase.run (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\testcase.js:58:31)
+    at Runnable.__runFn (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:839:80)
+    at Runnable.run (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\runnable.js:126:21)
+    at TestSuite.executeRunnable (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:1000:49)
+    at TestSuite.handleRunnable (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:1015:33)
+    at D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:839:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DefaultRunner.runTestSuite (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\runner\test-runners\default.js:83:7)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       ✖ ReferenceError
+   checkSubmissionStatus is not defined
+
+    Error location:
+    D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:22
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+     20 |   &#34;Submit Message Without Heading Test&#34;: function (browser) {
+     21 |     form.fillOutForm(&#34;test@domain.com&#34;, &#34;123&#34;, &#34;Test Message&#34;).submit();
+     22 |     const submitted = checkSubmissionStatus(form); 
+     23 |     if (submitted) {
+     24 |       form.verify.fail(&#34;Form allows submission without a subject heading&#34;);
+    ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+    Stack Trace :
+    at Submit Message Without Heading Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:22:23)
+    at Context.call (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\context.js:515:35)
+    at TestCase.run (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\testcase.js:58:31)
+    at Runnable.__runFn (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:839:80)
+    at Runnable.run (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\runnable.js:126:21)
+    at TestSuite.executeRunnable (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:1000:49)
+    at TestSuite.handleRunnable (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:1015:33)
+    at D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\testsuite\index.js:839:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async DefaultRunner.runTestSuite (D:\Coding\SDET_Task\ui_tests\node_modules\nightwatch\lib\runner\test-runners\default.js:83:7)
+
+    </system-err>
+  
+
+    
+
+  
+    
+    <testcase
+      name="Submit Message Without Email Test" classname="nightly_tests.contactUsForm.test">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Submit Message Without Order Reference" classname="nightly_tests.contactUsForm.test">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
