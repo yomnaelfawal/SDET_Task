@@ -16,7 +16,8 @@ The project is integrated with circleCI with an implemented manual trigger for t
 - git
 
 ### Steps
-1. Clone the repository: ```bash
+1. Clone the repository:
+   ```bash
    git clone https://github.com/yomnaelfawal/SDET_Task.git
 
 ## Run Tests
