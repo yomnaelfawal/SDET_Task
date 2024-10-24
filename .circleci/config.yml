@@ -1,10 +1,12 @@
 version: 2.1
-orbs:
-  node: circleci/node@4.7.0
+executors:
+  node-executor:
+    docker:
+      - image: circleci/node:18
 
 jobs:
   ui_tests:
-    executor: node/default
+    executor: node-executor
     steps:
       - checkout
 
@@ -22,7 +24,7 @@ jobs:
 
 
   api_tests:
-    executor: node/default 
+    executor: node-executor 
     steps:
        - checkout 
 
