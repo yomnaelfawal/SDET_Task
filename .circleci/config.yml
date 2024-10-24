@@ -12,7 +12,7 @@ jobs:
           name: Install UI test dependencies
           command: |
             cd ui_tests 
-            npm install nightwatch chromedrive --save-dev
+            npm install nightwatch chromedriver --save-dev
 
       - run:
           name: Run Nightwatch UI tests
