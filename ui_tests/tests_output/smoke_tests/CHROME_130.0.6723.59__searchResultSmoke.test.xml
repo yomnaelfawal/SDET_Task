@@ -5,9 +5,9 @@
 
   <testsuite name="smoke_tests.searchResultSmoke.test"
     errors="0" failures="0" hostname="" id="" package="smoke_tests" skipped="0"
-    tests="2" time="10.32" timestamp="">
+    tests="2" time="10.34" timestamp="">
   
-    <testcase name="Search Result Page Visibility Test" classname="smoke_tests.searchResultSmoke.test" time="0.2930" assertions="5">
+    <testcase name="Search Result Page Visibility Test" classname="smoke_tests.searchResultSmoke.test" time="0.3090" assertions="5">
 
     
 
@@ -20,7 +20,7 @@
     
     </testcase>
   
-    <testcase name="Search Result Page Basic Functionality Test" classname="smoke_tests.searchResultSmoke.test" time="1.449" assertions="2">
+    <testcase name="Search Result Page Basic Functionality Test" classname="smoke_tests.searchResultSmoke.test" time="1.909" assertions="2">
 
     
 

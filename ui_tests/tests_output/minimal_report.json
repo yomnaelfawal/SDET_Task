@@ -1,1 +1,1 @@
-{"modules":{"nightly_tests\\contactUsForm.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\nightly_tests\\contactUsForm.test.js","status":"fail"}}}
+{"modules":{"smoke_tests\\searchResultSmoke.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\smoke_tests\\searchResultSmoke.test.js","status":"pass"},"nightly_tests\\dressSearch.test":{"modulePath":"D:\\Coding\\SDET_Task\\ui_tests\\tests\\nightly_tests\\dressSearch.test.js","status":"fail"}}}

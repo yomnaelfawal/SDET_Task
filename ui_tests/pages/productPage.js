@@ -9,10 +9,6 @@ module.exports = {
     searchTitle: "#center_column > h1 > span.lighter",
   },
 
-  data: {
-    searchMatches: 0,
-  },
-
   commands: [
     {
       setUrl(currUrl) {
@@ -21,14 +17,15 @@ module.exports = {
       },
 
       getSearchResults(callback) {
+        let searchMatches;
         const browser = this.api;
         browser.elements(
           "css selector",
-          `${this.elements.productList} > *`,
+          `${this.elements.productList.selector} > *`,
           (result) => {
-            this.data.searchMatches = result.value.length;
+            searchMatches = result.value.length;
             if (callback) {
-              callback(this.data.searchMatches);
+              callback(searchMatches);
             }
           }
         );
@@ -53,14 +50,14 @@ module.exports = {
         return this.verify.cssClassPresent(
           "@gridView",
           "selected",
-          "Grid view is selected"
+          "Grid view is not selected"
         );
       },
       verifyListView() {
         return this.verify.cssClassPresent(
           "@listView",
           "selected",
-          "List view is selected"
+          "List view is not selected"
         );
       },
       verifySortSelection(value) {
@@ -68,7 +65,7 @@ module.exports = {
           `#selectProductSort > option:nth-child(${value + 1})`,
           "selected",
           "true",
-          "Sort selection made successfully"
+          "Sort selection was not made successfully"
         );
       },
     },

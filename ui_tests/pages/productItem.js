@@ -1,42 +1,57 @@
 module.exports = {
-  elements: {
-    quickViewBtn: (
-      index
-    ) => `#product_list > li:nth-child(${index}) > div > div.left-block > div > 
-                                    div.quick-view-wrapper-mobile > a`,
-    productName: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.right-block > h5 > a`,
-    productPrice: (
-      index
-    ) => `#product_list > li:nth-child(${index}) > div > div.right-block > div.content_price 
-                                    > span.price.product-price`,
-    addToCartBtn: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > span`,
-    moreBtn: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > a`,
-    colorList: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.right-block > div.color-list-container > ul`,
-    availabilityTag: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.right-block > span > span`,
-    compareBtn: (index) =>
-      `#product_list > li:nth-child(${index}) > div > div.functional-buttons.clearfix > div > a`,
-  },
-
-  data: {
-    colorOptions: 0,
-  },
+  // elements: {
+  //   productName: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.right-block > h5 > a`,
+  //   productPrice: (
+  //     index
+  //   ) => `#product_list > li:nth-child(${index}) > div > div.right-block > div.content_price
+  //                                   > span.price.product-price`,
+  //   addToCartBtn: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > span`,
+  //   moreBtn: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > a`,
+  //   colorList: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.color-list-container > ul`,
+  //   availabilityTag: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.right-block > span > span`,
+  //   compareBtn: (index) =>
+  //     `#product_list > li:nth-child(${index}) > div > div.functional-buttons.clearfix > div > a`,
+  // },
 
   commands: [
     {
-      getColorOptions(callback) {
-        const browser = this.api;
+      getProductNameSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > h5 > a`;
+      },
+      getProductPriceSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > div.content_price 
+                                    > span.price.product-price`;
+      },
+      getAddToCartBtnSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > span`;
+      },
+      getMoreBtnSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > a`;
+      },
+      getColorListSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > div.color-list-container > ul`;
+      },
+      getAvailabilityTagSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.right-block > span > span`;
+      },
+      getCompareBtnSelector(index) {
+        return `#product_list > li:nth-child(${index}) > div > div.functional-buttons.clearfix > div > a`;
+      },
+      getColorOptions(index, callback) {
+        let colorOptions;
+        const colorElementsSelector = this.getColorListSelector(index);
         browser.elements(
           "css selector",
-          `${this.elements.colorList} > *`,
+          `${colorElementsSelector} > *`,
           (result) => {
-            this.data.colorOptions = result.value.length;
+            colorOptions = result.value.length;
             if (callback) {
-              callback(this.data.colorOptions);
+              callback(colorOptions);
             }
           }
         );
@@ -49,18 +64,20 @@ module.exports = {
                             > div.color-list-container > ul > li:nth-child(${color})`);
       },
 
-      checkAvailability(callback) {
-        this.element.availabilityTag.getText((result) => {
-          const isAvailable = result.value.toLowerCase() === "in stock";
+      checkAvailability(index, callback) {
+        const availabilitySelector = this.getAvailabilityTagSelector(index);
+        this.api.getText(availabilitySelector, (result) => {
+          const isNotAvailable = result.value.toLowerCase() === "out of stock";
           if (callback) {
-            callback(isAvailable);
+            callback(isNotAvailable);
           }
         });
         return this;
       },
 
-      getPrice(callback) {
-        this.element.productPrice.getText((result) => {
+      getPrice(index, callback) {
+        const priceSelector = this.getProductPriceSelector(index);
+        this.api.getText(priceSelector, (result) => {
           //remove currency from price string
           const priceString = result.value.replace(/[^0-9.]+/g, "");
           //send price as a number not a string
@@ -72,12 +89,9 @@ module.exports = {
         return this;
       },
 
-      quickView() {
-        return this.click("@quickViewBtn");
-      },
-
-      getName(callback) {
-        this.element.productName.getText((result) => {
+      getName(index, callback) {
+        const nameSelector = this.getProductNameSelector(index);
+        this.api.getText(nameSelector, (result) => {
           const productName = result.value;
           if (callback) {
             callback(productName);
