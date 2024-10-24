@@ -20,7 +20,7 @@ jobs:
           name: Run Nightwatch UI tests
           command: |
             cd ui_tests 
-            npx nightwatch
+            npm test
 
 
   api_tests:
