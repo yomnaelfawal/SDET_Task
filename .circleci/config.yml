@@ -2,7 +2,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:23
+      - image: node:<version>-browsers
 
 jobs:
   ui_tests:
