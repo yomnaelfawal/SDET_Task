@@ -5,16 +5,16 @@
 
   <testsuite name="smoke_tests.homePageSearchSmoke.test"
     errors="0" failures="0" hostname="" id="" package="smoke_tests" skipped="0"
-    tests="2" time="10.70" timestamp="">
+    tests="2" time="10.12" timestamp="">
   
-    <testcase name="Home Page Visibility Test" classname="smoke_tests.homePageSearchSmoke.test" time="0.2390" assertions="2">
+    <testcase name="Home Page Visibility Test" classname="smoke_tests.homePageSearchSmoke.test" time="0.1670" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Home Basic Functionality Test" classname="smoke_tests.homePageSearchSmoke.test" time="1.733" assertions="2">
+    <testcase name="Home Basic Functionality Test" classname="smoke_tests.homePageSearchSmoke.test" time="1.886" assertions="2">
 
     
 

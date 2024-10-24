@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="8"
+            failures="7"
             tests="8">
 
   <testsuite name="nightly_tests.dressSearch.test"
-    errors="0" failures="8" hostname="" id="" package="nightly_tests" skipped="0"
-    tests="8" time="184.8" timestamp="">
+    errors="0" failures="7" hostname="" id="" package="nightly_tests" skipped="0"
+    tests="8" time="134.7" timestamp="">
   
-    <testcase name="Search Result Verification: Matches Test" classname="nightly_tests.dressSearch.test" time="7.791" assertions="1">
+    <testcase name="Search Result Verification: Matches Test" classname="nightly_tests.dressSearch.test" time="7.508" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Search Result Verification: All Dresses Test" classname="nightly_tests.dressSearch.test" time="11.77" assertions="7">
+    <testcase name="Search Result Verification: All Dresses Test" classname="nightly_tests.dressSearch.test" time="7.362" assertions="7">
 
     
 
@@ -31,7 +31,7 @@
     
     </testcase>
   
-    <testcase name="Sort Price Low to High Test" classname="nightly_tests.dressSearch.test" time="11.56" assertions="6">  <failure message="Failed [ok]: (Dress at index 2 is not sorted correctly. Previous price: 16.51, Current price: 16.4) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:47:31
+    <testcase name="Sort Price Low to High Test" classname="nightly_tests.dressSearch.test" time="8.047" assertions="6">  <failure message="Failed [ok]: (Dress at index 2 is not sorted correctly. Previous price: 16.51, Current price: 16.4) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:47:31
     at NightwatchAPI.&lt;anonymous&gt; (D:\Coding\SDET_Task\ui_tests\pages\productItem.js:86:13)</failure>
 
     
@@ -48,7 +48,7 @@
     
     </testcase>
   
-    <testcase name="Sort Price High to Low Test" classname="nightly_tests.dressSearch.test" time="11.62" assertions="6">
+    <testcase name="Sort Price High to Low Test" classname="nightly_tests.dressSearch.test" time="7.999" assertions="6">
 
       <failure message="Failed [ok]: (Dress at index 3 is not sorted correctly. Previous price: 28.98, Current price: 30.5) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:68:31
     at NightwatchAPI.&lt;anonymous&gt; (D:\Coding\SDET_Task\ui_tests\pages\productItem.js:86:13)</failure>
@@ -59,13 +59,13 @@
 
     
 
-      <failure message="Failed [ok]: (Dress at index 7 is not sorted correctly. Previous price: 16.4, Current price: 16.51) - expected &#34;true&#34; but got: &#34;false&#34; (1ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:68:31
+      <failure message="Failed [ok]: (Dress at index 7 is not sorted correctly. Previous price: 16.4, Current price: 16.51) - expected &#34;true&#34; but got: &#34;false&#34; (0ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:68:31
     at NightwatchAPI.&lt;anonymous&gt; (D:\Coding\SDET_Task\ui_tests\pages\productItem.js:86:13)</failure>
 
     
     </testcase>
   
-    <testcase name="Sort Products by Name Ascendingly Test" classname="nightly_tests.dressSearch.test" time="11.68" assertions="6">
+    <testcase name="Sort Products by Name Ascendingly Test" classname="nightly_tests.dressSearch.test" time="8.066" assertions="6">
 
     
 
@@ -80,7 +80,7 @@
     
     </testcase>
   
-    <testcase name="Sort Products by Name Descendingly Test" classname="nightly_tests.dressSearch.test" time="11.02" assertions="6">
+    <testcase name="Sort Products by Name Descendingly Test" classname="nightly_tests.dressSearch.test" time="8.074" assertions="6">
 
     
 
@@ -95,7 +95,7 @@
     
     </testcase>
   
-    <testcase name="Buy In/Out of Stock Item Test" classname="nightly_tests.dressSearch.test" time="17.54" assertions="7">  <failure message="Form does not allow adding in stock products to cart in 5000ms - expected &#34;has enabled&#34; but got: &#34;button ajax_add_to_cart_button btn btn-default disabled&#34; (5193ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:133:31
+    <testcase name="Buy In/Out of Stock Item Test" classname="nightly_tests.dressSearch.test" time="13.68" assertions="7">  <failure message="Form does not allow adding in stock products to cart in 5000ms - expected &#34;has enabled&#34; but got: &#34;button ajax_add_to_cart_button btn btn-default disabled&#34; (5366ms)">    at D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:133:31
     at NightwatchAPI.&lt;anonymous&gt; (D:\Coding\SDET_Task\ui_tests\pages\productItem.js:72:13)</failure>
 
     
@@ -113,8 +113,7 @@
     
     </testcase>
   
-    <testcase name="List View Test" classname="nightly_tests.dressSearch.test" time="9.424" assertions="1">  <failure message="searchPage.chooseView(...).verifListView is not a function">TypeError: searchPage.chooseView(...).verifListView is not a function
-    at List View Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\dressSearch.test.js:145:35)</failure>
+    <testcase name="List View Test" classname="nightly_tests.dressSearch.test" time="6.641" assertions="1">
 
     
     </testcase>

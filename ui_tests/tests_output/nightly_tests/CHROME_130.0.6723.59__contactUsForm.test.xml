@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="6"
-            tests="9">
+            tests="10">
 
   <testsuite name="nightly_tests.contactUsForm.test"
     errors="0" failures="6" hostname="" id="" package="nightly_tests" skipped="0"
-    tests="9" time="203.4" timestamp="">
+    tests="10" time="186.4" timestamp="">
   
-    <testcase name="Submit Message Without Heading Test" classname="nightly_tests.contactUsForm.test" time="7.123" assertions="3">
+    <testcase name="Submit Message Without Heading Test" classname="nightly_tests.contactUsForm.test" time="6.335" assertions="3">
 
     
 
@@ -16,7 +16,7 @@
     
     </testcase>
   
-    <testcase name="Submit Message Without Email Test" classname="nightly_tests.contactUsForm.test" time="7.614" assertions="3">
+    <testcase name="Submit Message Without Email Test" classname="nightly_tests.contactUsForm.test" time="6.163" assertions="3">
 
     
 
@@ -25,25 +25,16 @@
     
     </testcase>
   
-    <testcase name="Submit Message Without Order Reference - Customer Service" classname="nightly_tests.contactUsForm.test" time="18.14" assertions="3">
+    <testcase name="Submit Message Without Order Reference - Customer Service Test" classname="nightly_tests.contactUsForm.test" time="16.86" assertions="3">
 
-      <failure message="Form allows submission without order reference in 5000ms - expected &#34;is present&#34; but got: &#34;not present&#34; (5452ms)">    at Submit Message Without Order Reference - Customer Service (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:49:15)</failure>
+      <failure message="Form allows submission without order reference in 5000ms - expected &#34;is present&#34; but got: &#34;not present&#34; (5355ms)">    at Submit Message Without Order Reference - Customer Service Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:49:15)</failure>
 
-      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;element could not be located&#34; (5227ms)">    at Submit Message Without Order Reference - Customer Service (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:53:17)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Submit Message Without Message Body" classname="nightly_tests.contactUsForm.test" time="7.769" assertions="3">
-
-    
-
-    
+      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;element could not be located&#34; (5270ms)">    at Submit Message Without Order Reference - Customer Service Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:53:17)</failure>
 
     
     </testcase>
   
-    <testcase name="Submit Form with PDF File" classname="nightly_tests.contactUsForm.test" time="8.622" assertions="3">
+    <testcase name="Submit Message Without Message Body Test" classname="nightly_tests.contactUsForm.test" time="5.697" assertions="3">
 
     
 
@@ -52,7 +43,7 @@
     
     </testcase>
   
-    <testcase name="Submit Form with JPG File" classname="nightly_tests.contactUsForm.test" time="8.583" assertions="3">
+    <testcase name="Submit Message with Invalid Email Format Test" classname="nightly_tests.contactUsForm.test" time="5.840" assertions="3">
 
     
 
@@ -61,7 +52,7 @@
     
     </testcase>
   
-    <testcase name="Submit Form with JSON File" classname="nightly_tests.contactUsForm.test" time="7.581" assertions="3">
+    <testcase name="Submit Form with PDF File Test" classname="nightly_tests.contactUsForm.test" time="6.825" assertions="3">
 
     
 
@@ -70,28 +61,46 @@
     
     </testcase>
   
-    <testcase name="Submit Form without Email and without Message" classname="nightly_tests.contactUsForm.test" time="13.05" assertions="4">
+    <testcase name="Submit Form with JPG File Test" classname="nightly_tests.contactUsForm.test" time="6.921" assertions="3">
 
     
-
-      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5470ms)">    at Submit Form without Email and without Message (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:120:15)</failure>
 
     
 
     
     </testcase>
   
-    <testcase name="Submit empty Form" classname="nightly_tests.contactUsForm.test" time="23.19" assertions="6">
+    <testcase name="Submit Form with JSON File Test" classname="nightly_tests.contactUsForm.test" time="5.802" assertions="3">
 
     
 
-      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5382ms)">    at Submit empty Form (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:136:15)</failure>
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Form without Email and without Message Test" classname="nightly_tests.contactUsForm.test" time="11.14" assertions="4">
 
     
 
-      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;does not contain &#39;Please enter order reference&#39;&#34; (5396ms)">    at Submit empty Form (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:146:15)</failure>
+      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5312ms)">    at Submit Form without Email and without Message Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:136:15)</failure>
 
-      <failure message="Form does not notify user of error due to not choosing a subject in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided&#39;&#34; (5307ms)">    at Submit empty Form (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:151:15)</failure>
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit empty Form Test" classname="nightly_tests.contactUsForm.test" time="21.61" assertions="6">
+
+    
+
+      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5332ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:152:15)</failure>
+
+    
+
+      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;does not contain &#39;Please enter order reference&#39;&#34; (5346ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:162:15)</failure>
+
+      <failure message="Form does not notify user of error due to not choosing a subject in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided&#39;&#34; (5322ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\nightly_tests\contactUsForm.test.js:167:15)</failure>
 
     
     </testcase>
