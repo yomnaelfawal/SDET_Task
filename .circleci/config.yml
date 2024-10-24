@@ -9,30 +9,34 @@ jobs:
       - checkout
 
       - run:
-          name: Navigate to UI tests directory
-          command: cd ui_tests
-
-      - node/install-packages:
-          pkg-manager: npm
+          name: Install UI test dependencies
+          command: |
+            cd ui_tests 
+            npm install 
 
       - run:
           name: Run Nightwatch UI tests
-          command: npx nightwatch
+          command: |
+            cd ui_tests 
+            npx nightwatch
+
 
   api_tests:
     executor: node/default 
     steps:
-      - checkout
-      - run:
-          name: Navigate to API tests directory
-          command: cd api_tests
+       - checkout 
 
-      - node/install-packages:
-          pkg-manager: npm
+       - run:
+          name: Install API test dependencies
+          command: |
+            cd api_tests
+            npm install
 
-      - run:
+       - run:
           name: Run Supertest API tests
-          command: npx nightwatch
+          command: |
+            cd api_tests
+            npm test
 
 workflows:
   version: 2
