@@ -1,7 +1,7 @@
 #SDET Task for testing http://automationpractice.multiformis.com/index.php
 
-The project has both UI and API tests organized in two directories, the ui tests are split into nightly tests and smoke tests. The features being tested are the contact us form submission, the search feature and the search results page.
-The project is integrated with circleCI with an implemented manual trigger for the pipeline. The UI tests run first then the API tests run afterwards.
+The project has both UI and API tests organized in two directories, the ui tests are split into checklist tests and smoke tests. The features being tested are the contact us form submission, the search feature and the search results page.
+The project is integrated with circleCI. The UI tests run first then the API tests run afterwards. The API tests run using Jest test runner.
 
 ## Table of Contents
 
@@ -16,6 +16,7 @@ The project is integrated with circleCI with an implemented manual trigger for t
 - Node.js
 - Nightwatch
 - git
+- jest
 
 ### Steps
 
