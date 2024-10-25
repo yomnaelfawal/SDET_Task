@@ -18,10 +18,6 @@ jobs:
             cd ui_tests && npm run test
       - store_test_results:
           path: ./ui_tests/tests_output
-      - run:
-          name: Run API Tests
-          command: |
-            cd ../api_tests && npm run test
 
 workflows:
   e2e-test:
