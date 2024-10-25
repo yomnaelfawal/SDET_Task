@@ -46,6 +46,7 @@ To run the tests locally using Nightwatch, follow these steps:
    cd <project-directory>
    ```
 3. Navigate to the subdirectory containing the tests you want to run
+   
    3.1. For UI tests:
    ```bash
    cd ui_tests
