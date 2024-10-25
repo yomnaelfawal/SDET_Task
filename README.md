@@ -1,7 +1,7 @@
 #SDET Task for testing http://automationpractice.multiformis.com/index.php
 
-The project has both UI and API tests organized in two directories, the ui tests are split into checklist tests and smoke tests. The features being tested are the contact us form submission, the search feature and the search results page.
-The project is integrated with circleCI. The UI tests run first then the API tests run afterwards. The API tests run using Jest test runner.
+The project has both UI and API tests organized in two directories, the ui tests are split into checklist tests and smoke tests. The features being tested are the contact us form submission, the search feature and the search results page. The API tests run using Jest test runner using SuperTest module testing mock-user-auth user scenarios.
+The project is integrated with circleCI. The UI tests run first then the API tests run afterwards. 
 
 ## Table of Contents
 
@@ -14,9 +14,8 @@ The project is integrated with circleCI. The UI tests run first then the API tes
 ### Prerequisites
 
 - Node.js
-- Nightwatch
 - git
-- jest
+- npm/nvm
 
 ### Steps
 
@@ -24,10 +23,18 @@ The project is integrated with circleCI. The UI tests run first then the API tes
    ```bash
    git clone https://github.com/yomnaelfawal/SDET_Task.git
    ```
+2. Navigate to ui_tests or api_tests directory:
+   ```bash
+   cd <tests_directory>
+   ```
+3. Run the following to install dependencies:
+   ```bash
+   npm install
+   ```
 
 ## Run Tests
 
-You can run tests using Nightwatch in two ways: directly through the command line or by triggering the CircleCI pipeline.
+You can run tests using Nightwatch/Jest in two ways: directly through the command line or by triggering the CircleCI pipeline.
 
 ### Running Tests via Command Line
 
@@ -43,13 +50,21 @@ To run the tests locally using Nightwatch, follow these steps:
    ```bash
    cd ui_tests
    ```
+   3.1.1. Run the tests:
+   ```bash
+   npx nightwatch
+   ```
    3.2. For API tests:
    ```bash
    cd api_tests
    ```
-4. Run tests
+   3.2.1. Start the server:
    ```bash
-   npx nightwatch
+   npm run dev
+   ```
+   3.2.2. In a new terminal, run the tests:
+   ```bash
+   npm test
    ```
 
 ### Running Tests via CircleCI
