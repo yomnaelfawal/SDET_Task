@@ -25,7 +25,7 @@ The project is integrated with circleCI. The UI tests run first then the API tes
    ```
 2. Navigate to ui_tests or api_tests directory:
    ```bash
-   cd <tests_directory>
+   cd <tests-directory>
    ```
 3. Run the following to install dependencies:
    ```bash
