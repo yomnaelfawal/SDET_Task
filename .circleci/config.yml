@@ -16,7 +16,7 @@ jobs:
           name: Run UI Tests
           command: cd ui_tests && npm install && npm run test > output.log 2>&1
       - store_artifacts:
-          path: ./ui_tests/output.log
+          path: ./ui_tests/
       - store_test_results:
           path: ./ui_tests/tests_output
       - run:
