@@ -13,11 +13,19 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
-          name: Run Tests
-          command: |
-            cd ui_tests && npm run test && cd ../api_tests && npm run dev& && npm test
+          name: Run UI Tests
+          command: cd ui_tests && npm run test
+      - run:
+          name: Start API Server
+          command: cd api_tests && nohup npm run dev &
+      - run:
+          name: Run API Tests
+          command: cd api_tests && npm test
       - store_test_results:
           path: ./ui_tests/tests_output
+      - store_test_results:
+          path: ./api_tests/__tests__
+            
 
 workflows:
   e2e-test:
