@@ -12,8 +12,5 @@
   "devDependencies": {
     "chromedriver": "^130.0.0",
     "nightwatch": "^3.8.0"
-  },
-  "dependencies": {
-    "latest": "^0.2.0"
-  }
+}
 }
