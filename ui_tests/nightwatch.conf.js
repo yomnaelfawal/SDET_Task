@@ -73,7 +73,7 @@ module.exports = {
       },
       webdriver: {
         start_process: true,
-        server_path: "",
+        server_path: require('chromedriver').path,
         cli_args: [
           // very verbose geckodriver logs
           // '-vv'
@@ -90,10 +90,10 @@ module.exports = {
           // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
           w3c: true,
           args: [
-            //'--no-sandbox',
+            '--no-sandbox',
             //'--ignore-certificate-errors',
             //'--allow-insecure-localhost',
-            //'--headless'
+            '--headless'
           ],
         },
       },
