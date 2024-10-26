@@ -24,7 +24,7 @@ jobs:
       - store_test_results:
           path: ./ui_tests/tests_output
       - store_test_results:
-          path: ./api_tests/
+          path: ./api_tests/reports/junit
             
 
 workflows:
