@@ -13,9 +13,6 @@ jobs:
       - browser-tools/install-browser-tools
       - node/install-packages
       - run:
-          name: Install dependencies
-          command: npm install
-      - run:
           name: Run UI Tests
           command: cd ui_tests && npm install && npm run test > output.log 2>&1
       - store_artifacts:
