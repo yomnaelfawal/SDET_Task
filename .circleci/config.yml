@@ -15,8 +15,7 @@ jobs:
       - run:
           name: Run Tests
           command: |
-            cd ui_tests && npm run test |
-            cd api_tests
+            cd ui_tests && npm run test && cd ../api_tests && npm run dev& && npm test
       - store_test_results:
           path: ./ui_tests/tests_output
 
