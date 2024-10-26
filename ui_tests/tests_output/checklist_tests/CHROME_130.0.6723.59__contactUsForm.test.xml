@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="6"
+            tests="10">
+
+  <testsuite name="checklist_tests.contactUsForm.test"
+    errors="0" failures="6" hostname="" id="" package="checklist_tests" skipped="0"
+    tests="10" time="185.9" timestamp="">
+  
+    <testcase name="Submit Message Without Heading Test" classname="checklist_tests.contactUsForm.test" time="7.180" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Message Without Email Test" classname="checklist_tests.contactUsForm.test" time="5.733" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Message Without Order Reference - Customer Service Test" classname="checklist_tests.contactUsForm.test" time="16.22" assertions="3">
+
+      <failure message="Form allows submission without order reference in 5000ms - expected &#34;is present&#34; but got: &#34;not present&#34; (5301ms)">    at Submit Message Without Order Reference - Customer Service Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:49:15)</failure>
+
+      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;element could not be located&#34; (5133ms)">    at Submit Message Without Order Reference - Customer Service Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:53:17)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Submit Message Without Message Body Test" classname="checklist_tests.contactUsForm.test" time="5.781" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Message with Invalid Email Format Test" classname="checklist_tests.contactUsForm.test" time="5.845" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Form with PDF File Test" classname="checklist_tests.contactUsForm.test" time="6.696" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Form with JPG File Test" classname="checklist_tests.contactUsForm.test" time="6.951" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Form with JSON File Test" classname="checklist_tests.contactUsForm.test" time="6.101" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit Form without Email and without Message Test" classname="checklist_tests.contactUsForm.test" time="11.11" assertions="4">
+
+    
+
+      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5358ms)">    at Submit Form without Email and without Message Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:136:15)</failure>
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Submit empty Form Test" classname="checklist_tests.contactUsForm.test" time="21.31" assertions="6">
+
+    
+
+      <failure message="Form does not notify user of error due to blank message in 5000ms - expected &#34;contains text &#39;The message cannot be blank&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank&#39;&#34; (5296ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:152:15)</failure>
+
+    
+
+      <failure message="Form does not notify user of error due to not providing an order reference in 5000ms - expected &#34;contains text &#39;Please enter order reference&#39;&#34; but got: &#34;does not contain &#39;Please enter order reference&#39;&#34; (5294ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:162:15)</failure>
+
+      <failure message="Form does not notify user of error due to not choosing a subject in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided&#39;&#34; (5352ms)">    at Submit empty Form Test (D:\Coding\SDET_Task\ui_tests\tests\checklist_tests\contactUsForm.test.js:167:15)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
