@@ -1,6 +1,6 @@
 const request = require("supertest");
 const testData = require("../test_data/testData");
-const validUserToken = "eyJhbGciOiJI...";
+const validUserToken = "eyJhbGciOiJI";
 
 describe("Create User Tests", function () {
   it("Creates user with required field", async function () {

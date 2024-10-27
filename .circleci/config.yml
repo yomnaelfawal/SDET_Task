@@ -34,18 +34,18 @@ jobs:
           command: cd ui_tests && npm install && npm run test || true # workaround until i get tests to run from here
       - run:
           name: Start API Server
-          command: cd ./api_tests && npm install && npm run dev & # Didn't yet figure out how to start a server from here. Should use a wrapper.
+          command: cd ./api_tests && npm install && npm run dev & # Didnt yet figure out how to start a server from here. Should use a wrapper.
       - run:
           name: Run API Tests
           command: cd ./api_tests && npm test || true # workaround until i get tests to run from here
       - run:
-          name: Copy local tests results to show that my job can process results. Until I really generate one here
+          name: Copy local tests results #to show that my job can process results. Until I really generate one here
           command: cp -r tests_output ./ui_tests/tests_output && cp -r ./reports ./api_tests/reports
       - store_test_results:
           path: ./ui_tests/tests_output
       - store_test_results:
           path: ./api_tests/reports/junit
-            
+
 workflows:
   yomna-test:
     jobs:
