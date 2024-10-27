@@ -38,13 +38,10 @@ jobs:
       - run:
           name: Run API Tests
           command: cd ./api_tests && npm test || true # workaround until i get tests to run from here
-      - run:
-          name: Copy local tests results #to show that my job can process results. Until I really generate one here
-          command: cp -r tests_output ./tests_outputs_circleci
       - store_test_results:
-          path: ./ui_tests/tests_output
+          path: ./tests_outputs_circleci/tests_output
       - store_test_results:
-          path: ./api_tests/reports/junit
+          path: ./tests_outputs_circleci/reports/junit
 
 workflows:
   yomna-test:
