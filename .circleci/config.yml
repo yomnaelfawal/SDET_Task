@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.7
-  browser-tools: circleci/browser-tools@1.1.0
 
 jobs:
   test:
@@ -19,7 +18,11 @@ jobs:
             echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
             sudo apt-get update
             sudo apt-get install -y google-chrome-stable
-
+      - run:
+          name: Run tests
+          command: cd ui_tests && npm install && npm run test
+      - store_test_results:
+          path: ./ui_tests/tests_output
       - run:
           name: Start API Server
           command: cd ./api_tests && npm install && npm run dev &
@@ -28,11 +31,6 @@ jobs:
           command: cd ./api_tests && npm install && npm test
       - store_test_results:
           path: ./api_tests/reports/junit
-      - run:
-          name: Run tests
-          command: cd ui_tests && npm install && npm run test
-      - store_test_results:
-          path: ./ui_tests/tests_output
             
 workflows:
   e2e-test:
