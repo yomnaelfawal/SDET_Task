@@ -78,6 +78,9 @@ You can run the tests through the CircleCI pipeline by manually triggering the p
 2. Choose Branch -- master
 3. Click the **"Trigger Pipeline"** button to start the pipeline.
 
+#### NOTE
+Failed to integrate the pipeline with UI tests due to not being able to install Chrome Driver on Docker. Failed to integrate the pipeline with API tests due to not being able to run mock-user-auth server on a terminal in parallel to running the tests. The test results shown on CircleCI are parsed from already existing XML test reports. 
+
 ## CircleCI Badge
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/yomnaelfawal/SDET_Task/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/yomnaelfawal/SDET_Task/tree/master)
