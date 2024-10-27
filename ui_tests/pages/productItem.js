@@ -1,23 +1,4 @@
 module.exports = {
-  // elements: {
-  //   productName: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.right-block > h5 > a`,
-  //   productPrice: (
-  //     index
-  //   ) => `#product_list > li:nth-child(${index}) > div > div.right-block > div.content_price
-  //                                   > span.price.product-price`,
-  //   addToCartBtn: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > span`,
-  //   moreBtn: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.button-container > a`,
-  //   colorList: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.right-block > div.color-list-container > ul`,
-  //   availabilityTag: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.right-block > span > span`,
-  //   compareBtn: (index) =>
-  //     `#product_list > li:nth-child(${index}) > div > div.functional-buttons.clearfix > div > a`,
-  // },
-
   commands: [
     {
       getProductNameSelector(index) {
