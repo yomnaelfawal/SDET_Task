@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="smoke_tests.searchResultSmoke.test"
+    errors="0" failures="0" hostname="" id="" package="smoke_tests" skipped="0"
+    tests="2" time="12.47" timestamp="">
+  
+    <testcase name="Search Result Page Visibility Test" classname="smoke_tests.searchResultSmoke.test" time="0.4160" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search Result Page Basic Functionality Test" classname="smoke_tests.searchResultSmoke.test" time="1.858" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
