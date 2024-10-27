@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Start API Server
-          command: cd ./api_tests && npm install && nohup npm run dev && npm test
+          command: cd ./api_tests && npm install && npm run dev
       - run:
           name: Run API Tests
           command: cd ./api_tests && npm install && npm test
