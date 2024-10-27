@@ -37,7 +37,7 @@ jobs:
           command: cd ./api_tests && npm install && npm run dev & # Didnt yet figure out how to start a server from here. Should use a wrapper.
       - run:
           name: Run API Tests
-          command: cd ./api_tests && npm test || true # workaround until i get tests to run from here
+          command: cd ./api_tests && npm test #|| true # workaround until i get tests to run from here
       - store_test_results:
           path: ./tests_outputs_circleci/tests_output
       - store_test_results:
