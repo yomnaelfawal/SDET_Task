@@ -1,4 +1,4 @@
-#SDET Task for testing http://automationpractice.multiformis.com/index.php
+#SDET Task for testing http://automationpractice.multiformis.com/index.php and mock-user-auth
 
 The project has both UI and API tests organized in two directories, the ui tests are split into checklist tests and smoke tests. The features being tested are the contact us form submission, the search feature and the search results page. The API tests run using Jest test runner using SuperTest module testing mock-user-auth user scenarios.
 The project is integrated with circleCI. The UI tests run first then the API tests run afterwards. 
