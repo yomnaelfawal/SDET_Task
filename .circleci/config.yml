@@ -10,8 +10,6 @@ jobs:
       - image: cimg/node:16.10
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
       - run:
           name: Run tests
           command: cd ui_tests && npm install && npm run test
