@@ -40,7 +40,7 @@ jobs:
           command: cd ./api_tests && npm test || true # workaround until i get tests to run from here
       - run:
           name: Copy local tests results #to show that my job can process results. Until I really generate one here
-          command: cp -r tests_output ./ui_tests/tests_output && cp -r ./reports ./api_tests/reports
+          command: cp -r tests_output ./tests_output
       - store_test_results:
           path: ./ui_tests/tests_output
       - store_test_results:
