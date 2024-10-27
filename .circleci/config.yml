@@ -6,11 +6,11 @@ orbs:
 jobs:
   test:
     docker:
-      - image: cimg/node:23.1
+      - image: cimg/node:latest
     steps:
       - checkout
       - run:
-          # We should have these already on our docker image, but I cant find one with Chrome
+          # We should have these already on our docker image, but I cant find one with chrome. So working around this for now
           name: Install Chrome
           command: |
             sudo apt-get update
