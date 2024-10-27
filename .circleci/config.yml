@@ -22,10 +22,12 @@ jobs:
       - run:
           name: Install ChromeDriver for Chrome
           command: |
+             # Get the latest ChromeDriver version from the LATEST_RELEASE endpoint
             DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
             wget -N https://chromedriver.storage.googleapis.com/$DRIVER_VERSION/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip -d /usr/local/bin/
-            chmod +x /usr/local/bin/chromedriver
+            unzip chromedriver_linux64.zip
+            sudo mv chromedriver /usr/local/bin/
+            sudo chmod +x /usr/local/bin/chromedriver
             rm chromedriver_linux64.zip
       - run:
           name: Run tests
