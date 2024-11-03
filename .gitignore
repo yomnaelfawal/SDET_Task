@@ -3,3 +3,9 @@
 *npm-debug.log
 *yarn-error.log
 *package-lock.json
+
+# API test reports
+*reports/
+
+# Python virtual environment
+*api_script_env/

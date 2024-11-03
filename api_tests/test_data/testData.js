@@ -1,3 +1,6 @@
+const port = process.env.PORT || "8000";
+const host = `http://localhost:${port}`;
+
 module.exports = {
   newUser: {
     name: "usernametestest",
@@ -35,5 +38,5 @@ module.exports = {
 
   invalidAdminKey: { key_admin: "" },
 
-  localHosts: { host_8000: "http://localhost:8000" },
+  localHosts: { host },
 };
